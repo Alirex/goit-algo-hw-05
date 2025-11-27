@@ -160,5 +160,5 @@ git add .idea
 Use a number of tasks, if needed:
 
 ```shell
-bash scripts/create_tasks_layout.sh 2
+bash scripts/create_tasks_layout.sh 3
 ```
