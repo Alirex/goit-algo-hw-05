@@ -8,6 +8,19 @@ Topic: 5. "Search algorithms"
 
 ## Check
 
+### Task 1
+
+Check the code:
+
+- [main.py](src/goit_algo_hw_05/task_1/main.py)
+- [test](src/goit_algo_hw_05/task_1/tests/test_main.py)
+
+Run tests:
+
+```shell
+uv run pytest -k task_1 --verbose
+```
+
 [//]: # "### Task 1"
 [//]: #
 [//]: # "Check the code:"
