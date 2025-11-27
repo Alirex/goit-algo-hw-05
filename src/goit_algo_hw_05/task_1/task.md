@@ -1,7 +1,7 @@
 # Task 1
 
-Describe the task here.
+Додайте метод `delete` для видалення пар ключ-значення таблиці `HashTable`, яка реалізована в конспекті.
 
 ## Acceptance criteria
 
-Describe the acceptance criteria here.
+Код виконується, і метод `delete` видаляє задану пару ключ-значення в таблиці `HashTable`.
