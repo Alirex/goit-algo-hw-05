@@ -53,7 +53,7 @@ def get_parametrized_fixtures() -> list[ParameterSet]:
     get_parametrized_fixtures(),
 )
 @pytest.mark.benchmark
-def test_sorting_benchmark_i_10_000(
+def test_search_text_benchmark(
     func: SearchFuncSignature,
     data: str,
     pattern: str,

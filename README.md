@@ -34,39 +34,21 @@ Run tests:
 uv run pytest -k task_2 --verbose
 ```
 
-[//]: # "### Task 1"
-[//]: #
-[//]: # "Check the code:"
-[//]: #
-[//]: # "- [main.py](src/goit_algo_hw_04/task_1/main.py)"
-[//]: #
-[//]: # "Read the comparison results:"
-[//]: #
-[//]: # "- [comparison.md](src/goit_algo_hw_04/task_1/comparison.md)"
-[//]: #
-[//]: # "Run comparison by `timeit`:"
-[//]: #
-[//]: # "```shell"
-[//]: # "uv run task_1"
-[//]: # "```"
-[//]: #
-[//]: # "Run comparison by `pytest-benchmark` (with colorized output):"
-[//]: #
-[//]: # "```shell"
-[//]: # "uv run pytest -k test_sorting_benchmark --verbose"
-[//]: # "```"
-[//]: #
-[//]: # "### Task 2"
-[//]: #
-[//]: # "Check the code:"
-[//]: #
-[//]: # "- [main.py](src/goit_algo_hw_04/task_2/main.py)"
-[//]: #
-[//]: # "Run tests:"
-[//]: #
-[//]: # "```shell"
-[//]: # "uv run pytest -k test_merge_k_lists --verbose"
-[//]: # "```"
+### Task 3
+
+Check the code:
+
+- [main.py](src/goit_algo_hw_05/task_3/main.py)
+
+Read the comparison results:
+
+- [comparison.md](src/goit_algo_hw_05/task_3/comparison.md)
+
+Run tests:
+
+```shell
+uv run pytest -k "task_3 and test_benchmark" --verbose
+```
 
 ---
 
