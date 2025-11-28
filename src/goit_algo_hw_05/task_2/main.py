@@ -7,7 +7,7 @@ from comparable import Comparable
 type CollectionIndex = int
 """An index in a collection."""
 
-type PresortedCollection[T] = Sequence[T]
+type PresortedCollection[Item: Comparable[Any]] = Sequence[Item]
 """A presorted collection of comparable items."""
 
 type IterationsAmount = int
