@@ -1,0 +1,19 @@
+from typing import Protocol, runtime_checkable
+
+
+@runtime_checkable
+class Comparable[T](Protocol):  # noqa: PLW1641
+    """Comparable protocol.
+
+    For requesting a comparable types in generics.
+    """
+
+    def __lt__(self, value: T, /) -> bool: ...
+
+    def __gt__(self, value: T, /) -> bool: ...
+
+    def __le__(self, value: T, /) -> bool: ...
+    def __ge__(self, value: T, /) -> bool: ...
+
+    def __eq__(self, value: object, /) -> bool: ...
+    def __ne__(self, value: object, /) -> bool: ...
