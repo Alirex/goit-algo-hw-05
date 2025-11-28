@@ -21,6 +21,19 @@ Run tests:
 uv run pytest -k task_1 --verbose
 ```
 
+### Task 2
+
+Check the code:
+
+- [main.py](src/goit_algo_hw_05/task_2/main.py)
+- [test](src/goit_algo_hw_05/task_2/tests/test_main.py)
+
+Run tests:
+
+```shell
+uv run pytest -k task_2 --verbose
+```
+
 [//]: # "### Task 1"
 [//]: #
 [//]: # "Check the code:"

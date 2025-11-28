@@ -85,7 +85,15 @@ from goit_algo_hw_05.task_2.main import BinarySearchResult, NotFoundTraceableErr
         # 1: mid=(0+0)//2=0 (2.0) == 2.0 -> exact match found
         # ---
         # Decimal values
-        (
+        (  # exact match
+            [Decimal("0.1"), Decimal("0.2"), Decimal("0.3"), Decimal("0.4")],
+            Decimal("0.3"),
+            (2, Decimal("0.3")),
+        ),
+        # Steps to find 0.3:
+        # 1: mid=(0+3)//2=1 (0.2) < 0.3 -> go right
+        # 2: mid=(2+3)//2=2 (0.3) == 0.3 -> exact match found
+        (  # upper bound
             [Decimal("1.1"), Decimal("2.2"), Decimal("3.3")],
             Decimal("2.5"),
             (
@@ -99,7 +107,15 @@ from goit_algo_hw_05.task_2.main import BinarySearchResult, NotFoundTraceableErr
         # 3: low=2 > high=1 -> exit loop. Use candidate=3.3
         # ---
         # Fraction values
-        (
+        (  # exact match
+            [Fraction(1, 4), Fraction(1, 2), Fraction(3, 4)],
+            Fraction(1, 2),
+            (1, Fraction(1, 2)),
+        ),
+        # Steps to find 1/2:
+        # 1: mid=(0+2)//2=1 (1/2) == 1/2 -> exact match found
+        # ---
+        (  # upper bound
             [Fraction(1, 3), Fraction(1, 2), Fraction(2, 3)],
             Fraction(3, 5),
             (2, Fraction(2, 3)),
@@ -109,7 +125,15 @@ from goit_algo_hw_05.task_2.main import BinarySearchResult, NotFoundTraceableErr
         # 3: low=2 > high=1 -> exit loop. Use candidate=2/3
         # ---
         # Custom comparable class
-        (
+        (  # exact match
+            [Some(value=1), Some(value=3), Some(value=5)],
+            Some(value=3),
+            (1, Some(value=3)),
+        ),
+        # Steps to find Some(3):
+        # 1: mid=(0+2)//2=1 (Some(3)) == Some(3) -> exact match found
+        # ---
+        (  # upper bound
             [Some(value=1), Some(value=3), Some(value=5)],
             Some(value=4),
             (2, Some(value=5)),
