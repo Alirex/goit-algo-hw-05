@@ -1,21 +1,48 @@
+from typing import TYPE_CHECKING
+
 import pytest
 
-from goit_algo_hw_05.task_3.main import main
+from goit_algo_hw_05.task_3.services.search_i_text_i_boyer_moore import search_i_text_i_boyer_moore
+from goit_algo_hw_05.task_3.services.search_i_text_i_kmp import search_i_text_i_kmp
+from goit_algo_hw_05.task_3.services.search_i_text_i_rabin_karp import search_i_text_i_rabin_karp
+
+if TYPE_CHECKING:
+    from goit_algo_hw_05.task_3.services.signature import SearchFuncSignature
 
 
 @pytest.mark.parametrize(
-    ("input_data", "expected_output"),
+    "func",
     [
-        # Add test cases here
-        (None, None),
+        search_i_text_i_rabin_karp,
+        search_i_text_i_boyer_moore,
+        search_i_text_i_kmp,
     ],
 )
-@pytest.mark.skip(reason="No tests implemented yet.")
 def test_main(
-    input_data: None,  # noqa: ARG001
-    expected_output: None,  # noqa: ARG001
+    func: SearchFuncSignature,
 ) -> None:
-    # Implement test logic here
-    # result = main()
-    # assert result == expected_output
-    main()
+    text = "Being a developer is not easy"
+    pattern = "developer"
+    position = 8
+
+    result = func(text, pattern)
+
+    assert result == position
+
+
+@pytest.mark.parametrize(
+    "func",
+    [
+        search_i_text_i_rabin_karp,
+        search_i_text_i_boyer_moore,
+        search_i_text_i_kmp,
+    ],
+)
+def test_not_found(
+    func: SearchFuncSignature,
+) -> None:
+    text = "Being a developer is not easy"
+    pattern = "python"
+    position = None
+    result = func(text, pattern)
+    assert result == position
